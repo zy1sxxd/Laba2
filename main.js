@@ -17,3 +17,9 @@ function findTopStudent(data) {
         return best;
     }, data[0]).name;
 }
+
+function filterFailed(data, passScore) {
+    return data
+        .filter(item => item.score < passScore)
+        .map(item => item.name);
+}
