@@ -32,3 +32,9 @@ function addLetterGrade(data) {
         return { ...student, letter };
     });
 }
+
+console.log("1. Средний балл:", calculateAverage(grades));
+console.log("2. Лучший студент:", findTopStudent(grades));
+console.log("3. Список должников у которыз балл ниже 60:", filterFailed(grades, 60));
+console.log("4. Итоговый массив с буквенными оценками:");
+console.log(addLetterGrade(grades));
