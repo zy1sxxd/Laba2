@@ -10,3 +10,10 @@ function calculateAverage(data) {
     const total = data.reduce((sum, student) => sum + student.score, 0);
     return total / data.length;
 }
+
+function findTopStudent(data) {
+    return data.reduce((best, item) => {
+        if (item.score > best.score) return item;
+        return best;
+    }, data[0]).name;
+}
